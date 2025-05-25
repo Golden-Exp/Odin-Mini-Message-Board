@@ -8,8 +8,13 @@ app.set("view engine", "ejs");
 
 
 const indexRouter = require("./routes/indexRouter");
+const messageRouter  = require("./routes/messageRouter")
+app.use(express.urlencoded({ extended: true }));
+
 
 app.use("/", indexRouter);
+
+app.use("/new", messageRouter);
 
 //app.post("/new", newMessage);
 

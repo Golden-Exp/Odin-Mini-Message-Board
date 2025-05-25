@@ -2,4 +2,10 @@ const { Router } = require("express");
 
 const messageRouter = Router();
 
-messageRouter.get()
+
+messageRouter.get("", (req, res) => {
+    res.render("form", {})
+});
+
+
+module.exports = messageRouter;
